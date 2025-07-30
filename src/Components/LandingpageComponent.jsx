@@ -56,13 +56,29 @@ const LandingPage = ({ onEnter }) => {
           </p>
         </div>
 
-        <button
-          onClick={onEnter}
-          className="group bg-gradient-to-r from-brown-600 to-green-600 hover:from-green-700 hover:to-pink-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-        >
-          Explorar Perfil
-          <ChevronRight className="inline-block ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-        </button>
+     <button 
+  onClick={() => {
+    console.log("Botón clickeado");
+    
+    // Verificar si existe el elemento
+    const element = document.getElementById('WelcomePage');
+    console.log("Elemento encontrado:", element);
+    
+    if (element) {
+      console.log("Scrolleando a elemento");
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    } else {
+      console.log("No se encontró el elemento WelcomePage");
+    }
+  }}
+  className="group bg-gradient-to-r from-brown-600 to-green-600 hover:from-green-700 hover:to-brown-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+>
+  Explorar Perfil
+  <ChevronRight className="inline-block ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+</button>
 
         <div className="mt-12 animate-bounce">
           <ChevronDown className="w-8 h-8 text-purple-300 mx-auto" />
