@@ -51,6 +51,7 @@ const Skills = () => {
   }, []);
 
   return (
+        <section id="SkillsPage">
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-amber-50 py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
@@ -88,6 +89,7 @@ const Skills = () => {
         </div>
       </div>
     </div>
+          </section>
   );
 };
 
