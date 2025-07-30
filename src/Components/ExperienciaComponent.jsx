@@ -60,7 +60,7 @@ const ProfessionalExperience = () => {
   }, []);
 
   return (
-        <section id="ExperienciaPage">
+    <section id="ExperienciaPage">
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-green-50 py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
@@ -69,33 +69,33 @@ const ProfessionalExperience = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          {/* Timeline navigation */}
+          {
+          /* Timeline navigation */}
           <div className="flex justify-center mb-12 overflow-x-auto">
             <div className="flex space-x-4 bg-white rounded-full p-2 shadow-lg">
               {experiences.map((_, index) => (
-                <button 
-  onClick={() => {
-    console.log("Botón clickeado");
-    
-    // Verificar si existe el elemento
-    const element = document.getElementById('WelcomePage');
-    console.log("Elemento encontrado:", element);
-    
-    if (element) {
-      console.log("Scrolleando a elemento");
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    } else {
-      console.log("No se encontró el elemento WelcomePage");
-    }
-  }}
-  className="group bg-gradient-to-r from-brown-600 to-green-600 hover:from-green-700 hover:to-brown-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                
+             <button
+  key={index}
+  onClick={() => setCurrentExperience(index)}
+  className={`px-4 py-2 rounded-full transition-all ${
+    currentExperience === index
+      ? 'bg-gradient-to-r from-emerald-500 to-green-500 text-white'
+      : 'text-emerald-700 hover:bg-emerald-100'
+  }`}
 >
-  Explorar Perfil
-  <ChevronRight className="inline-block ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+  {(() => {
+    switch(index) {
+      case 0: return "Presente";
+      case 1: return "2010-2017";
+      case 2: return "2000-2010";
+      case 3: return "1990-2000";
+      default: return `Sección ${index + 1}`;
+    }
+  })()}
 </button>
+
+
               ))}
             </div>
           </div>
@@ -148,8 +148,10 @@ const ProfessionalExperience = () => {
         </div>
       </div>
     </div>
-          </section>
+    </section>
   );
 };
+
+export default ProfessionalExperience;
 
 export default ProfessionalExperience;
