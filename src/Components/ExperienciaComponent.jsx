@@ -75,7 +75,25 @@ const ProfessionalExperience = () => {
             <div className="flex space-x-4 bg-white rounded-full p-2 shadow-lg">
               {experiences.map((_, index) => (
                 
-             
+             <button
+  key={index}
+  onClick={() => setCurrentExperience(index)}
+  className={`px-4 py-2 rounded-full transition-all ${
+    currentExperience === index
+      ? 'bg-gradient-to-r from-emerald-500 to-green-500 text-white'
+      : 'text-emerald-700 hover:bg-emerald-100'
+  }`}
+>
+  {(() => {
+    switch(index) {
+      case 0: return "Presente";
+      case 1: return "2010-2017";
+      case 2: return "2000-2010";
+      case 3: return "1990-2000";
+      default: return `Sección ${index + 1}`;
+    }
+  })()}
+</button>
 
 
               ))}
@@ -136,4 +154,4 @@ const ProfessionalExperience = () => {
 
 export default ProfessionalExperience;
 
-export default ProfessionalExperience;
+
