@@ -60,6 +60,7 @@ const ProfessionalExperience = () => {
   }, []);
 
   return (
+        <section id="ExperienciaPage">
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-green-50 py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
@@ -135,6 +136,7 @@ const ProfessionalExperience = () => {
         </div>
       </div>
     </div>
+          </section>
   );
 };
 
