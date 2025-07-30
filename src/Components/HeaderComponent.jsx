@@ -6,14 +6,13 @@ const NeomorphismHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-
   const navLinks = [
     { name: "Inicio", path: "#" },
     { name: "Gracias", path: "#WelcomePage" },
-    { name: "Formación", path: "#" },
-     { name: "Skills", path: "#" },
-      { name: "Experiencia", path: "#" },
-    { name: "Contacto", path: "#" },
+    { name: "Formación", path: "#FormacionPage" },
+     { name: "Skills", path: "#SkillsPage" },
+      { name: "Experiencia", path: "#ExperienciaPage" },
+    { name: "Contacto", path: "#ContactoPage" },
   ];
 
   const handleNavLinkClick = () => {
