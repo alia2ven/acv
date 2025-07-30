@@ -58,7 +58,7 @@ const LandingPage = ({ onEnter }) => {
 
         <button
           onClick={onEnter}
-          className="group bg-gradient-to-r from-brown-600 to-green-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          className="group bg-gradient-to-r from-brown-600 to-green-600 hover:from-green-700 hover:to-pink-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
         >
           Explorar Perfil
           <ChevronRight className="inline-block ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
